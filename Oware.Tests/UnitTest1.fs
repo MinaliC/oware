@@ -121,7 +121,7 @@ let ``A player cannot manipulate their opponent's houses`` () =
 [<Test>]
 let ``You cannot sow from an empty house`` () =
     let game = playGame [4; 11; 4]
-    game |> hasSeedCount (5, 5, 5, 0, 5, 5, 5, 5, 4, 4, 0, 5)
+    game |> hasSeedCount (5,5,5,0,5,5,5,5,4,4,0,5)
     gameState game |> should equal "South's turn"
 
 [<Test>]
