@@ -60,23 +60,16 @@ let seedsZero n board =
         |6 | 12->(a,b,c,d,e,0)
         |_->failwith "Not implemented"
 
+let getCurrentPlayer gamePhase board =
+    match gamePhase with
+    |SouthTurn-> board.player1.house//"player1"
+    |NorthTurn-> board.player2.house//"player2"
+    |_ -> failwith "Not implemented"
 
+let useHouse n board =
+ failwith "Not implemented"
 
-let useHouse n board=
-   failwith "Not implemented" 
-  (*  let seedNum = getSeeds n board 
-    let newBoard = seedsZero n board
-    let rec seedMoves  hn v nb=
-        match v >0 with
-        | true ->let a = getSeeds (hn+1) nb
-                 let b = setSeeds (hn+1) nb
-                 seedMoves (hn+1) (v-1) b
-        | false -> nb 
-    match n< 13 && n> 0 with
-        | true -> seedMoves n seedNum newBoard
-        |false-> failwith " "
- *)
-  
+   
 
 let start position =
    //failwith "Not implemented" 
